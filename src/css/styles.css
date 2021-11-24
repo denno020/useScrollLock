@@ -1,0 +1,178 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: slategray;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  padding: 20px;
+  background-color: slategray;
+  color: white;
+}
+
+a {
+  color: slategray;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+header a {
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+
+.quick-view-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: white;
+  padding: 30px;
+  grid-gap: 30px;
+}
+
+.quick-view-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-view-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.quick-view-modal--close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  transition: background-color 100ms linear;
+  font-size: 1.3em;
+  background-color: transparent;
+  border: 1px solid slategray;
+}
+
+.quick-view-modal--close:hover {
+  background-color: slategray;
+  transition: background-color 100ms linear;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.product-card__image-container {
+  height: 205px;
+  width: auto;
+  overflow: hidden;
+}
+
+.product-card__name {
+  font-size: 1.3em;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.product-card__price {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.product-card__actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.product-card__action {
+  border: 0;
+  background-color: slategray;
+  transition: background-color 100ms linear;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.3em;
+}
+
+.product-card__action--qv {
+  background-color: transparent;
+  border: 1px solid slategray;
+}
+
+.product-card__action--qv:hover {
+  background-color: slategray;
+  transition: background-color 100ms linear;
+}
+
+.product-card__configurations {
+  display: flex;
+  gap: 10px;
+}
+
+.product-card__configuration {
+  width: 36px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.configuration--red {
+  background-color: red;
+  border-color: transparent;
+}
+.configuration--white {
+  background-color: white;
+}
+.configuration--blue {
+  background-color: blue;
+  border-color: transparent;
+}
+.configuration--green {
+  background-color: green;
+  border-color: transparent;
+}
+
+.configuration--yellow {
+  background-color: yellow;
+}
+
+.btn--load-more {
+  margin: 10px auto;
+  display: block;
+  padding: 5px 20px;
+}
