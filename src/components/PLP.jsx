@@ -2,15 +2,19 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 import { products } from "../products.js";
+import { useScrollLock } from "../hooks/useScrollLock";
 
 const PLP = () => {
   const [quickViewProductId, setQuickViewProductId] = React.useState(0);
+  const { lockScroll, unlockScroll } = useScrollLock();
 
   const displayQuickView = (productId) => {
+    lockScroll();
     setQuickViewProductId(productId);
   }
 
   const hideQuickView = () => {
+    unlockScroll();
     setQuickViewProductId(0);
   }
 
@@ -18,7 +22,7 @@ const PLP = () => {
     <React.Fragment>
       {quickViewProductId > 0 && (
         <div className="quick-view-modal">
-          <button onClick={displayQuickView} className="quick-view-modal--close">&#10799;</button>
+          <button onClick={hideQuickView} className="quick-view-modal--close">&#10799;</button>
           <div className="quick-view-image-container">
             <img src={products.find(product => product.id === quickViewProductId).image}/>
           </div>
