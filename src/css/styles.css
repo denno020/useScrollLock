@@ -52,6 +52,12 @@ button {
   height: 70px;
   background-color: slategrey;
 }
+
+
+[data-scroll-lock] .button--help {
+  margin-right: var(--scrollbar-compensation);
+}
+
 .quick-view-modal {
   position: fixed;
   top: 50%;
