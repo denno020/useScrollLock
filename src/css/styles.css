@@ -41,6 +41,17 @@ button {
   cursor: pointer;
 }
 
+.button--help {
+  position: fixed;
+  padding: 5px;
+  font-size: 2.5em;
+  right: 10px;
+  top: 90vh;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: slategrey;
+}
 .quick-view-modal {
   position: fixed;
   top: 50%;
