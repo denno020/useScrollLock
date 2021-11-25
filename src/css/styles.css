@@ -68,6 +68,8 @@ button {
   background-color: white;
   padding: 30px;
   grid-gap: 30px;
+  max-height: 585px;
+  height: 100%;
 }
 
 .quick-view-image-container {
@@ -80,6 +82,11 @@ button {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  overflow: hidden;
+}
+
+.product-card__description {
+  overflow-y: auto;
 }
 
 .quick-view-modal--close {
